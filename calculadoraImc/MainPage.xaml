@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadoraImc.MainPage"
+             BackgroundColor="#EAEFF7">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="12" VerticalOptions="Center">
+
+            <Label Text="Calculadora de IMC"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#17375E"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Peso (kg)" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="entryPeso"
+                   Placeholder="Ej: 70"
+                   Keyboard="Numeric"
+                   TextColor="Black" />
+
+            <Label Text="Altura (m)" FontAttributes="Bold" TextColor="Black" />
+            <Entry x:Name="entryAltura"
+                   Placeholder="Ej: 1,75"
+                   Keyboard="Numeric"
+                   TextColor="Black" />
+
+            <Button x:Name="btnCalcular"
+                    Text="CALCULAR IMC"
+                    BackgroundColor="#1A3C8C"
+                    TextColor="White"
+                    Clicked="btnCalcular_Clicked" />
+
+            <Label x:Name="lblResultado"
+                   Text=""
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="lblCategoria"
+                   Text=""
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Image x:Name="imgCategoria"
+                   HeightRequest="150"
+                   IsVisible="False"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
